@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class Diver : MonoBehaviour
 {
     [SerializeField]
-    SwimMovement _movement;
+    private SwimMovement _movement;
 
     /// <summary>
     /// Pushes the player in the direction pulled from the InputAction context.

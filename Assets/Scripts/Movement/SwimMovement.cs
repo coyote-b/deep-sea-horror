@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -8,13 +9,15 @@ public class SwimMovement : MonoBehaviour
     private Vector2 _lastAppliedForce = new Vector2(0, 1);
 
     [SerializeField]
-    Rigidbody2D _body;
+    private Rigidbody2D _body;
 
     [SerializeField]
-    float _movementSpeed;
+    private float _movementSpeed;
 
     [SerializeField]
-    float _boostSpeed;
+    private float _boostSpeed;
+
+    public float StoppingDistance;
 
     /// <summary>
     /// Applies force to the RigidBody according to the force specified.
@@ -31,6 +34,18 @@ public class SwimMovement : MonoBehaviour
     public void Boost()
     {
         Move(_lastAppliedForce, _boostSpeed);
+    }
+
+    public IEnumerator SwimToPoint(Transform point)
+    {
+        Vector2 direction = (transform.position - point.position).normalized;
+
+        while (Vector2.Distance(transform.position, point.position) > StoppingDistance)
+        {
+            Move(direction, _movementSpeed);
+
+            yield return null;
+        }
     }
 
     /// <summary>
