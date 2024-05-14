@@ -1,16 +1,55 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class Oxygen : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private float _currentOxygen;
+
+    [SerializeField]
+    private float _maxOxygen;
+
+    [SerializeField]
+    private float _depletionRate;
+
+    [SerializeField]
+    private float _depletionAmount;
+
+    [SerializeField]
+    private float _boostDepletionAmount;
+
+    //TODO: Remove this and replace with actual UI once Teddy finishes that
+    [SerializeField]
+    private TextMeshProUGUI _oxygenMeter;
+    
     void Start()
     {
-        
+        _currentOxygen = _maxOxygen;
+        _oxygenMeter.text = _currentOxygen.ToString();
+        StartCoroutine(DepleteOxygenOverTime());
     }
 
-    // Update is called once per frame
-    void Update()
+    public void BoostReduce()
     {
-        
+        DepleteOxygen(_boostDepletionAmount);
+    }
+
+    public void DepleteOxygen(float depletionAmount)
+    {
+        if (_currentOxygen <= 0)
+            return;
+
+        _currentOxygen -= depletionAmount;
+        _oxygenMeter.text = _currentOxygen.ToString();
+    }
+
+    private IEnumerator DepleteOxygenOverTime()
+    {
+        while (_currentOxygen > 0)
+        {
+            yield return new WaitForSeconds(_depletionRate);
+            _currentOxygen -= _depletionAmount;
+            _oxygenMeter.text = _currentOxygen.ToString();
+        }
     }
 }
