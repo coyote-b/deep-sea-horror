@@ -19,6 +19,8 @@ public class SwimMovement : MonoBehaviour
 
     public float StoppingDistance;
 
+    public Rigidbody2D Body => _body;
+
     /// <summary>
     /// Applies force to the RigidBody according to the force specified.
     /// </summary>
@@ -34,6 +36,15 @@ public class SwimMovement : MonoBehaviour
     public void Boost()
     {
         Move(_lastAppliedForce, _boostSpeed);
+    }
+
+    /// <summary>
+    /// Applies force to the Rigidbody according to the boost speed in a specified direction.
+    /// </summary>
+    /// <param name="force"></param>
+    public void Boost(Vector2 force)
+    {
+        Move(force, _boostSpeed);
     }
 
     public IEnumerator SwimToPoint(Transform point)
@@ -55,7 +66,14 @@ public class SwimMovement : MonoBehaviour
     /// <param name="speed">The speed multiplier of the force.</param>
     private void Move(Vector2 force, float speed)
     {
+        LookTowards(force);
         _body.AddForce(new Vector2(force.x * speed, force.y * speed));
         _lastAppliedForce = force;
+    }
+
+    private void LookTowards(Vector2 direction)
+    {
+        var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(Vector3.forward * (angle - 90f));
     }
 }

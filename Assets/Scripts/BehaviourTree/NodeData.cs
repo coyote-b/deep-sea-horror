@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace BehaviourTreeSystem
 {
@@ -35,6 +32,20 @@ namespace BehaviourTreeSystem
         public void SetData(string key, object value)
         {
             _dataContext[key] = value;
+        }
+
+        public void SetDataInRoot(string key, object value)
+        {
+            INode currentNode = _node.Parent;
+            INode nextNode = currentNode.Parent;
+
+            while (nextNode != null)
+            {
+                currentNode = nextNode;
+                nextNode = currentNode.Parent;
+            }
+
+            currentNode.Data.SetData(key, value);
         }
 
         public object GetData(string key)

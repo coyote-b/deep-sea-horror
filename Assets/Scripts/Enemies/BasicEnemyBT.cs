@@ -18,6 +18,11 @@ public class BasicEnemyBT : BehaviourTree
     {
         INode root = new Selector(new List<INode>
         {
+            new Sequencer(new List<INode>
+            {
+                new CheckIfPlayerSeen(_movement.Body),
+                new ChaseTask(_movement)
+            }),
             new RoamTask(_movement, _waypoints, _waitTime)
         });
 
