@@ -12,6 +12,9 @@ public class Diver : MonoBehaviour
     [SerializeField]
     private Oxygen _oxygen;
 
+    [SerializeField]
+    private Inventory _inventory;
+
     /// <summary>
     /// Pushes the player in the direction pulled from the InputAction context.
     /// </summary>

@@ -46,9 +46,9 @@ public partial class @DiverControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Accelerate"",
+                    ""name"": ""Replenish Oxygen"",
                     ""type"": ""Button"",
-                    ""id"": ""b956eceb-7ab8-4514-857e-7392e436e842"",
+                    ""id"": ""cf4259c1-da49-4a8c-8acf-aa68f6c4c34a"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -216,41 +216,41 @@ public partial class @DiverControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Oxygen"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""802347be-dc8a-4152-a2a7-e508c4434d98"",
-                    ""path"": ""<Gamepad>/{Back}"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Accelerate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""33e031e6-6937-4872-971d-074ecf5e4234"",
+                    ""id"": ""d295ea7f-e8ce-495d-b23f-258435c29118"",
                     ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Accelerate"",
+                    ""action"": ""Replenish Oxygen"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b9d756b8-8e8d-450f-8db8-5c73f24a29cc"",
-                    ""path"": ""<Joystick>/{SecondaryAction}"",
+                    ""id"": ""f25bff64-1a7b-4978-902b-1240a920de56"",
+                    ""path"": ""<AndroidJoystick>/{SecondaryTrigger}"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Accelerate"",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Replenish Oxygen"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5f793d57-ae0c-4939-98db-6e9833755813"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Replenish Oxygen"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -840,7 +840,7 @@ public partial class @DiverControls: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Oxygen = m_Player.FindAction("Oxygen", throwIfNotFound: true);
-        m_Player_Accelerate = m_Player.FindAction("Accelerate", throwIfNotFound: true);
+        m_Player_ReplenishOxygen = m_Player.FindAction("Replenish Oxygen", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -916,14 +916,14 @@ public partial class @DiverControls: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Oxygen;
-    private readonly InputAction m_Player_Accelerate;
+    private readonly InputAction m_Player_ReplenishOxygen;
     public struct PlayerActions
     {
         private @DiverControls m_Wrapper;
         public PlayerActions(@DiverControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Oxygen => m_Wrapper.m_Player_Oxygen;
-        public InputAction @Accelerate => m_Wrapper.m_Player_Accelerate;
+        public InputAction @ReplenishOxygen => m_Wrapper.m_Player_ReplenishOxygen;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -939,9 +939,9 @@ public partial class @DiverControls: IInputActionCollection2, IDisposable
             @Oxygen.started += instance.OnOxygen;
             @Oxygen.performed += instance.OnOxygen;
             @Oxygen.canceled += instance.OnOxygen;
-            @Accelerate.started += instance.OnAccelerate;
-            @Accelerate.performed += instance.OnAccelerate;
-            @Accelerate.canceled += instance.OnAccelerate;
+            @ReplenishOxygen.started += instance.OnReplenishOxygen;
+            @ReplenishOxygen.performed += instance.OnReplenishOxygen;
+            @ReplenishOxygen.canceled += instance.OnReplenishOxygen;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -952,9 +952,9 @@ public partial class @DiverControls: IInputActionCollection2, IDisposable
             @Oxygen.started -= instance.OnOxygen;
             @Oxygen.performed -= instance.OnOxygen;
             @Oxygen.canceled -= instance.OnOxygen;
-            @Accelerate.started -= instance.OnAccelerate;
-            @Accelerate.performed -= instance.OnAccelerate;
-            @Accelerate.canceled -= instance.OnAccelerate;
+            @ReplenishOxygen.started -= instance.OnReplenishOxygen;
+            @ReplenishOxygen.performed -= instance.OnReplenishOxygen;
+            @ReplenishOxygen.canceled -= instance.OnReplenishOxygen;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1139,7 +1139,7 @@ public partial class @DiverControls: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnOxygen(InputAction.CallbackContext context);
-        void OnAccelerate(InputAction.CallbackContext context);
+        void OnReplenishOxygen(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

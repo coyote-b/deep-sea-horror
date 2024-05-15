@@ -43,6 +43,16 @@ public class Oxygen : MonoBehaviour
         _oxygenMeter.text = _currentOxygen.ToString();
     }
 
+    public void IncreaseOxygen(float increaseAmount)
+    {
+        _currentOxygen += increaseAmount;
+
+        if (_currentOxygen > _maxOxygen)
+            _currentOxygen = _maxOxygen;
+
+        _oxygenMeter.text = _currentOxygen.ToString();
+    }
+
     private IEnumerator DepleteOxygenOverTime()
     {
         while (_currentOxygen > 0)
