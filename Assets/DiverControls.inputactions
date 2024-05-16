@@ -24,9 +24,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Accelerate",
+                    "name": "Replenish Oxygen",
                     "type": "Button",
-                    "id": "b956eceb-7ab8-4514-857e-7392e436e842",
+                    "id": "cf4259c1-da49-4a8c-8acf-aa68f6c4c34a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -194,41 +194,41 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Oxygen",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "802347be-dc8a-4152-a2a7-e508c4434d98",
-                    "path": "<Gamepad>/{Back}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Accelerate",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "33e031e6-6937-4872-971d-074ecf5e4234",
-                    "path": "<Keyboard>/tab",
+                    "id": "d295ea7f-e8ce-495d-b23f-258435c29118",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Accelerate",
+                    "action": "Replenish Oxygen",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "b9d756b8-8e8d-450f-8db8-5c73f24a29cc",
-                    "path": "<Joystick>/{SecondaryAction}",
+                    "id": "f25bff64-1a7b-4978-902b-1240a920de56",
+                    "path": "<AndroidJoystick>/{SecondaryTrigger}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Accelerate",
+                    "groups": "Joystick",
+                    "action": "Replenish Oxygen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5f793d57-ae0c-4939-98db-6e9833755813",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Replenish Oxygen",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
