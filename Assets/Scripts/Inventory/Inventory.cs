@@ -1,34 +1,39 @@
+using System;
 using System.Collections.Generic;
-using TNRD;
 using UnityEngine;
-using UnityEngine.Events;
 
 [CreateAssetMenu(menuName = "Inventory/Inventory")]
 public class Inventory : ScriptableObject
 {
-    private Dictionary<IItem, int> _inventory = new Dictionary<IItem, int>();
+    private Dictionary<Item, int> _inventory = new Dictionary<Item, int>();
 
-    public List<SerializableInterface<IItem>> Items;
+    public List<Item> Items;
 
-    public UnityEvent OnItemAdded;
-    public UnityEvent OnItemConsumed;
+    public delegate void OnInventoryUpdatedHandler(Item item, int amount);
+    public event OnInventoryUpdatedHandler OnInventoryUpdated;
 
-    public int GetItemNumber(IItem item)
+    public int GetItemNumber(Item item)
     {
         return _inventory[item];
     }
 
-    public void UpdateItemCount(IItem item)
+    public void UpdateItemCount(Item item)
     {
+        if (!_inventory.ContainsKey(item))
+            _inventory.Add(item, 0);
+
         _inventory[item] = _inventory[item]++;
+        OnInventoryUpdated.Invoke(item, _inventory[item]);
+        item.PickUpItem();
     }
 
-    public void ConsumeItem(IItem item)
+    public void ConsumeItem(Item item)
     {
         if (_inventory.ContainsKey(item) && _inventory[item] > 0)
         {
-            item.Use();
+            item.UseItem();
             _inventory[item] = _inventory[item]--;
+            OnInventoryUpdated.Invoke(item, _inventory[item]);
         }
     }
 }

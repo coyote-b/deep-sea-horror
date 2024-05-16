@@ -1,15 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI _amountUI;
+    private Inventory _inventory;
 
-    public void UpdateUI(int amount)
+    [SerializeField]
+    private List<ItemUI> _itemUIs;
+
+    private void Start()
     {
-        _amountUI.text = amount.ToString();
+        _inventory.OnInventoryUpdated += UpdateItemUI;
+    }
+
+    private void UpdateItemUI(Item item, int amount)
+    {
+        ItemUI itemUI = _itemUIs.Where(x => x == item).FirstOrDefault();
+
+        if (itemUI == null)
+            return;
+
+        itemUI.UpdateUI(amount);
     }
 }

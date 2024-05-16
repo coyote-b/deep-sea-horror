@@ -21,9 +21,15 @@ public class Oxygen : MonoBehaviour
     //TODO: Remove this and replace with actual UI once Teddy finishes that
     [SerializeField]
     private TextMeshProUGUI _oxygenMeter;
+
+    [SerializeField]
+    private Item _oxygenReplenish;
     
     void Start()
     {
+        // TODO: Fix magic numbers...
+        _oxygenReplenish.OnItemUsed += () => { IncreaseOxygen(50); };
+
         _currentOxygen = _maxOxygen;
         _oxygenMeter.text = _currentOxygen.ToString();
         StartCoroutine(DepleteOxygenOverTime());

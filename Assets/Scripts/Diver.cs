@@ -1,3 +1,4 @@
+using TNRD;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -34,5 +35,14 @@ public class Diver : MonoBehaviour
             _movement.Boost();
             _oxygen.BoostReduce();
         }
+    }
+
+    /// <summary>
+    /// Uses an inventory item in the inventory.
+    /// </summary>
+    /// <param name="item"></param>
+    public void UseInventoryItem(Item item)
+    {
+        _inventory.ConsumeItem(item);
     }
 }

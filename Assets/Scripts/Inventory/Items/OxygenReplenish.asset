@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7046e7d70fcb1d24fbaf3dfe3c0288e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 375005fd2bbbaed4ab62a5d1cf9f7cd4, type: 3}
   m_Name: OxygenReplenish
   m_EditorClassIdentifier: 
+  _description: Replenishes your oxygen tank.

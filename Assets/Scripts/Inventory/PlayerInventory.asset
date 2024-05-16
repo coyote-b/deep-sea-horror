@@ -12,13 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94b63078abbd913488141c3b0939d29f, type: 3}
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
-  Items: []
-  OnItemAdded:
-    m_PersistentCalls:
-      m_Calls: []
-  OnItemConsumed:
-    m_PersistentCalls:
-      m_Calls: []
-  references:
-    version: 2
-    RefIds: []
+  Items:
+  - {fileID: 11400000, guid: 5e40d580ccb902b4cb920fd844e58d70, type: 2}
