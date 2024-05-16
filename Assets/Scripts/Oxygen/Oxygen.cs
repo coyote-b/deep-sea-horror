@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Oxygen : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class Oxygen : MonoBehaviour
 
     [SerializeField]
     private Item _oxygenReplenish;
+
+    public UnityEvent<float> OnOxygenLevelDecreased;
     
     void Start()
     {
