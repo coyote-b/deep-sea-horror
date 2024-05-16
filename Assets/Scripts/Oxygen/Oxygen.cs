@@ -50,6 +50,7 @@ public class Oxygen : MonoBehaviour
 
         _currentOxygen -= depletionAmount;
         _oxygenMeter.text = _currentOxygen.ToString();
+        OnOxygenLevelDecreased?.Invoke(_currentOxygen);
     }
 
     public void IncreaseOxygen(float increaseAmount)
@@ -67,8 +68,7 @@ public class Oxygen : MonoBehaviour
         while (_currentOxygen > 0)
         {
             yield return new WaitForSeconds(_depletionRate);
-            _currentOxygen -= _depletionAmount;
-            _oxygenMeter.text = _currentOxygen.ToString();
+            DepleteOxygen(_depletionAmount);
         }
     }
 }

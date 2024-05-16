@@ -1,31 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BubbleUI : MonoBehaviour
 {
     [SerializeField]
-    private float _percentage;
+    private Image _image;
 
     [SerializeField]
-    private Animator _animator;
+    private Sprite _bubblePop;
 
-    public float Percentage => _percentage;
-
-    // Start is called before the first frame update
-    void Start()
+    public IEnumerator Pop()
     {
-        
-    }
+        // This is yucky compared to using the animator, but...
+        // I want to avoid making 6 different animations, and I can't use the sprite renderer for UI.
+        _image.sprite = _bubblePop;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        yield return new WaitForSeconds(0.25f);
 
-    public void Pop()
-    {
-
+        _image.enabled = false;
     }
 }
