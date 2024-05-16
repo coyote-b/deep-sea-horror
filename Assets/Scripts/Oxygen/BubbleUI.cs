@@ -1,15 +1,24 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BubbleUI : MonoBehaviour
 {
+    private Sprite _originalImage;
+
     [SerializeField]
     private Image _image;
 
     [SerializeField]
     private Sprite _bubblePop;
+
+    [SerializeField]
+    private Sprite _bubbleAdd;
+
+    private void Start()
+    {
+        _originalImage = _image.sprite;
+    }
 
     public IEnumerator Pop()
     {
@@ -20,5 +29,15 @@ public class BubbleUI : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
 
         _image.enabled = false;
+    }
+
+    public IEnumerator Blow()
+    {
+        _image.sprite = _bubbleAdd;
+        _image.enabled = true;
+
+        yield return new WaitForSeconds(0.25f);
+
+        _image.sprite = _originalImage;
     }
 }

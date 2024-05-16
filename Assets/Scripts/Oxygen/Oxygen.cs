@@ -19,14 +19,11 @@ public class Oxygen : MonoBehaviour
     [SerializeField]
     private float _boostDepletionAmount;
 
-    //TODO: Remove this and replace with actual UI once Teddy finishes that
-    [SerializeField]
-    private TextMeshProUGUI _oxygenMeter;
-
     [SerializeField]
     private Item _oxygenReplenish;
 
     public UnityEvent<float> OnOxygenLevelDecreased;
+    public UnityEvent<float> OnOxygenLevelIncreased;
     
     void Start()
     {
@@ -34,7 +31,6 @@ public class Oxygen : MonoBehaviour
         _oxygenReplenish.OnItemUsed += () => { IncreaseOxygen(50); };
 
         _currentOxygen = _maxOxygen;
-        _oxygenMeter.text = _currentOxygen.ToString();
         StartCoroutine(DepleteOxygenOverTime());
     }
 
@@ -49,7 +45,6 @@ public class Oxygen : MonoBehaviour
             return;
 
         _currentOxygen -= depletionAmount;
-        _oxygenMeter.text = _currentOxygen.ToString();
         OnOxygenLevelDecreased?.Invoke(_currentOxygen);
     }
 
@@ -60,7 +55,7 @@ public class Oxygen : MonoBehaviour
         if (_currentOxygen > _maxOxygen)
             _currentOxygen = _maxOxygen;
 
-        _oxygenMeter.text = _currentOxygen.ToString();
+        OnOxygenLevelIncreased?.Invoke(_currentOxygen);
     }
 
     private IEnumerator DepleteOxygenOverTime()

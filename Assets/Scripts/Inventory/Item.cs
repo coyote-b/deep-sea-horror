@@ -14,11 +14,11 @@ public class Item : ScriptableObject
 
     public void PickUpItem()
     {
-        OnItemPickedUp.Invoke();
+        OnItemPickedUp?.Invoke();
     }
 
     public void UseItem()
     {
-        OnItemUsed.Invoke();
+        OnItemUsed?.Invoke();
     }
 }

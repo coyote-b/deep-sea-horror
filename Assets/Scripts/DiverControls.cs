@@ -224,7 +224,7 @@ public partial class @DiverControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d295ea7f-e8ce-495d-b23f-258435c29118"",
-                    ""path"": ""<Keyboard>/tab"",
+                    ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",

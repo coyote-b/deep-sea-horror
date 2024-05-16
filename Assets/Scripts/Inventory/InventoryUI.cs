@@ -19,7 +19,7 @@ public class InventoryUI : MonoBehaviour
 
     private void UpdateItemUI(Item item, int amount)
     {
-        ItemUI itemUI = _itemUIs.Where(x => x == item).FirstOrDefault();
+        ItemUI itemUI = _itemUIs.Where(x => x.Item == item).FirstOrDefault();
 
         if (itemUI == null)
             return;
