@@ -1,0 +1,272 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Swim
+    m_Hash: 780061838
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Swim South 1
+      m_Hash: 586123821
+      m_Sprite: {fileID: 48586521, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 48586521, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim South 2
+      m_Hash: 1004985239
+      m_Sprite: {fileID: 548690312, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 548690312, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim South 3
+      m_Hash: 216132353
+      m_Sprite: {fileID: 1868270799, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1868270799, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim South 4
+      m_Hash: 310738594
+      m_Sprite: {fileID: 1586932991, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1586932991, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim South 5
+      m_Hash: 629296692
+      m_Sprite: {fileID: 251131038, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 251131038, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim South 6
+      m_Hash: 1015750542
+      m_Sprite: {fileID: 1380374042, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1380374042, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim Sideways 1
+      m_Hash: 670113562
+      m_Sprite: {fileID: 754761571, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 754761571, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim Sideways 2
+      m_Hash: 1056460448
+      m_Sprite: {fileID: -1040370321, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1040370321, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim Sideways 3
+      m_Hash: 167738934
+      m_Sprite: {fileID: -1403506198, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1403506198, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim Sideways 4
+      m_Hash: 396094357
+      m_Sprite: {fileID: 396168323, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 396168323, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim Sideways 5
+      m_Hash: 547150595
+      m_Sprite: {fileID: 1107241750, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1107241750, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim Sideways 6
+      m_Hash: 966101689
+      m_Sprite: {fileID: -1992982810, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1992982810, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim North 1
+      m_Hash: 382118707
+      m_Sprite: {fileID: -1041649286, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1041649286, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim North 2
+      m_Hash: 265288329
+      m_Sprite: {fileID: -769563065, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -769563065, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim North 3
+      m_Hash: 952683039
+      m_Sprite: {fileID: -1233738092, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1233738092, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim North 4
+      m_Hash: 648830908
+      m_Sprite: {fileID: -1654560643, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1654560643, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim North 5
+      m_Hash: 296447786
+      m_Sprite: {fileID: 1548585864, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1548585864, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Swim North 6
+      m_Hash: 144850576
+      m_Sprite: {fileID: -963012174, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -963012174, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 18
+  - m_Name: Pickup
+    m_Hash: 103955659
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Pickup South 1
+      m_Hash: 909413094
+      m_Sprite: {fileID: -747561630, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -747561630, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Pickup South 2
+      m_Hash: 792583004
+      m_Sprite: {fileID: 245356863, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 245356863, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Pickup South 3
+      m_Hash: 406514634
+      m_Sprite: {fileID: -1164418617, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1164418617, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Pickup Sideways 1
+      m_Hash: 722103603
+      m_Sprite: {fileID: 1054646782, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1054646782, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Pickup Sideways 2
+      m_Hash: 839072905
+      m_Sprite: {fileID: -1310399958, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1310399958, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Pickup Sideways 3
+      m_Hash: 84151327
+      m_Sprite: {fileID: 2084503368, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2084503368, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Pickup Sideways 4
+      m_Hash: 459315644
+      m_Sprite: {fileID: -577484612, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -577484612, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Pickup North 1
+      m_Hash: 35499000
+      m_Sprite: {fileID: -1330176492, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1330176492, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Pickup North 2
+      m_Hash: 454359618
+      m_Sprite: {fileID: 292432224, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 292432224, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Pickup North 3
+      m_Hash: 739494612
+      m_Sprite: {fileID: 207112648, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 207112648, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 10
+  - m_Name: Boost
+    m_Hash: 396691564
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Boost South 1
+      m_Hash: 1046910240
+      m_Sprite: {fileID: -779376185, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -779376185, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Boost South 2
+      m_Hash: 661636250
+      m_Sprite: {fileID: -2026239370, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2026239370, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Boost South 3
+      m_Hash: 275313676
+      m_Sprite: {fileID: 702414346, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 702414346, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Boost South 4
+      m_Hash: 235692463
+      m_Sprite: {fileID: -77974750, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -77974750, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Boost Sideways 1
+      m_Hash: 907524559
+      m_Sprite: {fileID: 1151871009, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1151871009, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Boost Sideways 2
+      m_Hash: 790554741
+      m_Sprite: {fileID: 915940192, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 915940192, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Boost Sideways 3
+      m_Hash: 404347107
+      m_Sprite: {fileID: 1543188199, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1543188199, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Boost Sideways 4
+      m_Hash: 108875072
+      m_Sprite: {fileID: 1181189622, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1181189622, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Boost North 1
+      m_Hash: 172995646
+      m_Sprite: {fileID: 1248861467, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1248861467, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Boost North 2
+      m_Hash: 323413380
+      m_Sprite: {fileID: 208902148, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 208902148, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Boost North 3
+      m_Hash: 608294162
+      m_Sprite: {fileID: -1245323544, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1245323544, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Boost North 4
+      m_Hash: 975519921
+      m_Sprite: {fileID: 1951694492, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1951694492, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 12
+  - m_Name: Idle
+    m_Hash: 1008081451
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Idle South 1
+      m_Hash: 774194214
+      m_Sprite: {fileID: 332870877, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 332870877, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Idle South 2
+      m_Hash: 925635996
+      m_Sprite: {fileID: -1582512835, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1582512835, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Idle Sideways 1
+      m_Hash: 90972441
+      m_Sprite: {fileID: -1278457308, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1278457308, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Idle Sideways 2
+      m_Hash: 476410019
+      m_Sprite: {fileID: 881881318, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 881881318, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Idle North 1
+      m_Hash: 437019960
+      m_Sprite: {fileID: 1489842052, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1489842052, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    - m_Name: Idle North 2
+      m_Hash: 50672770
+      m_Sprite: {fileID: 862765810, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 862765810, guid: cd75d77f930c2ef4cba43ee2248937e5, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638515485525143123
+  m_Version: 1
